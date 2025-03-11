@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공원 소개 - 행복한 동네 공원</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-section {
+            padding: 80px 0;
+            background-color: var(--light-text);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        .history-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--light-text);
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -12px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--light-text);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-year {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--light-text);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 20px;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 19px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>행복한 동네 공원</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">홈</a></li>
+                    <li><a href="about.html">공원 소개</a></li>
+                    <li><a href="facilities.html">시설 안내</a></li>
+                    <li><a href="events.html">이벤트</a></li>
+                    <li><a href="gallery.html">갤러리</a></li>
+                    <li><a href="contact.html">문의하기</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/about-header.jpg'); background-size: cover; background-position: center; color: white; text-align: center; padding: 80px 0;">
+        <div class="container">
+            <h1>공원 소개</h1>
+            <p>우리 동네의 자랑, 행복한 동네 공원에 대해 알아보세요</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="../images/park-overview.jpg" alt="공원 전경">
+                </div>
+                <div class="about-text">
+                    <h2>자연과 함께하는 휴식 공간</h2>
+                    <p>행복한 동네 공원은 2005년에 조성된 도심 속 자연 휴식 공간으로, 총 면적 25,000㎡의 규모를 자랑합니다. 다양한 수목과 꽃으로 가득한 이 공원은 지역 주민들에게 사랑받는 휴식 및 여가 공간입니다.</p>
+                    <p>공원 내에는 어린이 놀이터, 운동 시설, 산책로, 분수대, 야외 공연장 등 다양한 시설이 마련되어 있어 남녀노소 모두가 즐길 수 있는 공간입니다.</p>
+                    <p>또한 계절마다 다양한 꽃과 나무들이 피고 지며 사계절 내내 아름다운 경관을 제공합니다. 봄에는 벚꽃과 개나리, 여름에는 수국과 장미, 가을에는 단풍과 코스모스, 겨울에는 설경이 방문객들을 맞이합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <div class="container">
+            <h2 class="section-title">공원의 역사</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2003년</span>
+                        <h3>공원 계획 수립</h3>
+                        <p>도시 재생 프로젝트의 일환으로 공원 조성 계획이 수립되었습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2004년</span>
+                        <h3>공사 착공</h3>
+                        <p>지역 주민들의 의견을 반영한 설계를 바탕으로 공원 조성 공사가 시작되었습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2005년</span>
+                        <h3>공원 개장</h3>
+                        <p>1년간의 공사 끝에 행복한 동네 공원이 정식 개장하였습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2010년</span>
+                        <h3>확장 공사</h3>
+                        <p>늘어나는 방문객을 위해 공원 면적을 확장하고 추가 시설을 설치하였습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2015년</span>
+                        <h3>생태 공원 조성</h3>
+                        <p>공원 내 일부 구역을 생태 보존 구역으로 지정하여 다양한 생물들의 서식지를 마련하였습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020년</span>
+                        <h3>스마트 공원 시스템 도입</h3>
+                        <p>IoT 기술을 활용한 스마트 공원 시스템을 도입하여 방문객들에게 더 나은 서비스를 제공하고 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background-color: var(--light-text);">
+        <div class="container">
+            <h2 class="section-title">공원 이용 안내</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div style="background-color: var(--light-bg); padding: 25px; border-radius: 8px; box-shadow: var(--shadow);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;"><i class="far fa-clock" style="margin-right: 10px;"></i> 이용 시간</h3>
+                    <p><strong>3월 ~ 10월:</strong> 오전 5시 ~ 오후 10시</p>
+                    <p><strong>11월 ~ 2월:</strong> 오전 6시 ~ 오후 9시</p>
+                    <p><em>※ 기상 상황에 따라 변경될 수 있습니다.</em></p>
+                </div>
+                <div style="background-color: var(--light-bg); padding: 25px; border-radius: 8px; box-shadow: var(--shadow);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;"><i class="fas fa-ban" style="margin-right: 10px;"></i> 이용 제한 사항</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>음주 및 흡연</li>
+                        <li>취사 및 화기 사용</li>
+                        <li>오토바이 등 엔진 동력 이용 기구</li>
+                        <li>고성방가 및 소음 유발 행위</li>
+                        <li>쓰레기 무단 투기</li>
+                    </ul>
+                </div>
+                <div style="background-color: var(--light-bg); padding: 25px; border-radius: 8px; box-shadow: var(--shadow);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;"><i class="fas fa-info-circle" style="margin-right: 10px;"></i> 기타 안내</h3>
+                    <p>공원 내 화장실은 총 4개소가 있습니다.</p>
+                    <p>음수대는 총 6개소가 설치되어 있습니다.</p>
+                    <p>분실물은 공원 관리사무소에서 보관합니다.</p>
+                    <p>공원 내 모든 구역은 CCTV로 관리되고 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>행복한 동네 공원</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 서울시 행복구 즐거움동 123번지</p>
+                    <p><i class="fas fa-phone"></i> 02-123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@happypark.kr</p>
+                </div>
+                <div class="footer-links">
+                    <h3>바로가기</h3>
+                    <ul>
+                        <li><a href="../index.html">홈</a></li>
+                        <li><a href="about.html">공원 소개</a></li>
+                        <li><a href="facilities.html">시설 안내</a></li>
+                        <li><a href="events.html">이벤트</a></li>
+                        <li><a href="gallery.html">갤러리</a></li>
+                        <li><a href="contact.html">문의하기</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>소셜 미디어</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 행복한 동네 공원. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 
